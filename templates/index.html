@@ -36,8 +36,8 @@
     <div class="container d-flex justify-content-between">
 
       <div class="logo" style="padding-bottom: 20px;">
-        <h1><a href="{{ url_for('static', filename='index') }}">SAVN</a></h1>
-        <!-- <a href="{{ url_for('static', filename='index') }}"><img src="{{ url_for('static', filename='img/icon.png') }}" alt="" class="img-fluid">SAVN</a> -->
+        <h1><a href="{{ url_for('index') }}">SAVN</a></h1>
+        <!-- <a href="{{ url_for('index') }}"><img src="{{ url_for('static', filename='img/icon.png') }}" alt="" class="img-fluid">SAVN</a> -->
       </div>
 
       <nav id="navbar" class="navbar">
@@ -45,7 +45,7 @@
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link scrollto" href="#steps">Steps</a></li>
-          <li><a class="nav-link scrollto" href="#system">System</a></li>
+          <li><a class="nav-link scrollto" href="{{ url_for('sentimentanalysis') }}">System</a></li>
           <li><a class="nav-link scrollto" href="#team">Team</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -151,7 +151,7 @@
     </section><!-- End Steps Section -->
 
     <!-- ======= System Section ======= -->
-    <section id="system" class="system">
+    <!-- <section id="system" class="system">
       <div class="container">
         <center>
           <div class="section-title" data-aos="fade-up">
@@ -160,14 +160,20 @@
           </div>
           <div class="row mt-5 justify-content-center" data-aos="fade-up">
             <div class="col-lg-10">
-              <form action="" method="post" role="form" class="php-email-form">
-                <div class="text-center"><button type="submit">Upload voice note</button></div>
+              <form action="" method="post" role="form" class="php-email-form" enctype=multipart/form-data>
+                <input class="form-control" type="file" id="myFile" name="filename" style="margin-bottom: 20px; padding-top: 11px; padding-left: 18px;"> -->
+                <!-- <div class="text-center">
+                  <a class="form-control" href="{{ url_for('sentimentanalysis') }}">Upload VoiceNote</a>
+                </div> -->
+                <!-- <div class="text-center">
+                  <button type="submit"><a href="{{ url_for('sentimentanalysis') }}" style="color: white;">Upload VoiceNote</a></button>
+                </div>
               </form>
             </div>
           </div>
         </center>
       </div>
-    </section><!-- End System Section -->
+    </section>End System Section -->
 
 
     <!-- ======= Team Section ======= -->
@@ -279,9 +285,8 @@
   <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
   <script src="{{ url_for('static', filename='vendor/glightbox/js/glightbox.min.js') }}"></script>
   <script src="{{ url_for('static', filename='vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
-  <script src="{{ url_for('static', filename='vendor/php-email-form/validate.js') }}"></script>
   <script src="{{ url_for('static', filename='vendor/swiper/swiper-bundle.min.js') }}"></script>
-
+  
   <!-- Template Main JS File -->
   <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 
