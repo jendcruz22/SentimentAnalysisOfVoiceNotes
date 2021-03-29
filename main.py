@@ -1,4 +1,5 @@
 import os
+import sys
 from werkzeug.utils import secure_filename
 from flask import Flask, flash, request, redirect, send_file, render_template
 from flask_bootstrap import Bootstrap
@@ -50,7 +51,8 @@ def sentimentanalysis():
             # save the input audio in the uploads folder
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
             print("saved file successfully")
-        return redirect('sentimentanalysis.html')
+        
+        # return redirect('sentimentanalysis.html')
     return render_template('sentimentanalysis.html')
 
 if __name__ == "__main__":
