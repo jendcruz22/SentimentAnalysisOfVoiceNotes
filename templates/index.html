@@ -10,22 +10,22 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="static/img/icon.png" rel="icon">
-  <link href="static/img/icon.png" rel="apple-touch-icon">
+  <link href="{{ url_for('static', filename='img/icon.png') }}" rel="icon">
+  <link href="{{ url_for('static', filename='img/icon.png') }}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="static/vendor/aos/aos.css" rel="stylesheet">
-  <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="static/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="static/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="static/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="static/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/aos/aos.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="static/css/style.css" rel="stylesheet">
+  <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
 
 </head>
 
@@ -36,8 +36,8 @@
     <div class="container d-flex justify-content-between">
 
       <div class="logo" style="padding-bottom: 20px;">
-        <h1><a href="index.html">SAVN</a></h1>
-        <!-- <a href="index.html"><img src="static/img/icon.png" alt="" class="img-fluid">SAVN</a> -->
+        <h1><a href="{{ url_for('static', filename='index') }}">SAVN</a></h1>
+        <!-- <a href="{{ url_for('static', filename='index') }}"><img src="{{ url_for('static', filename='img/icon.png') }}" alt="" class="img-fluid">SAVN</a> -->
       </div>
 
       <nav id="navbar" class="navbar">
@@ -58,7 +58,7 @@
   <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
     
     <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-      <source src="./static/img/bg-vid.mp4" type="video/mp4">
+      <source src="{{ url_for('static', filename='img/bg-vid.mp4') }}" type="video/mp4">
     </video>
 
     <div class="overlay">
@@ -78,7 +78,7 @@
 
         <div class="row">
           <div class="col-xl-6 col-lg-7" data-aos="fade-right">
-            <img src="static/img/icon.png" class="img-fluid" alt="">
+            <img src="{{ url_for('static', filename='img/icon.png') }}" class="img-fluid" alt="">
           </div>
           <div class="col-xl-6 col-lg-5 pt-5 pt-lg-0">
             <h3 data-aos="fade-up">About the system</h3>
@@ -160,7 +160,7 @@
           </div>
           <div class="row mt-5 justify-content-center" data-aos="fade-up">
             <div class="col-lg-10">
-              <form action="forms/system.php" method="post" role="form" class="php-email-form">
+              <form action="" method="post" role="form" class="php-email-form">
                 <div class="text-center"><button type="submit">Upload voice note</button></div>
               </form>
             </div>
@@ -183,17 +183,17 @@
 
           <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up">
             <div class="member">
-              <img src="static/img/team/Dan.jpg" class="img-fluid" alt="">
+              <img src="{{ url_for('static', filename='img/team/Dan.jpg') }}" class="img-fluid" alt="">
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>Daniel Lobo</h4>
                   <span>St. Francis Institute of Technology<br>BE CMPN A - 06</span>
                 </div>
                 <div class="social">
-                  <a href="mailto:danlobo1999@gmail.com"><i class="bi bi-envelope"></i></a>
-                  <a href="https://github.com/danlobo1999"><i class="bi bi-github"></i></a>
-                  <a href="https://www.instagram.com/xeptonix/"><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
+                  <a href="mailto:danlobo1999@gmail.com" target="_blank"><i class="bi bi-envelope"></i></a>
+                  <a href="https://github.com/danlobo1999" target="_blank"><i class="bi bi-github"></i></a>
+                  <a href="https://www.instagram.com/xeptonix/" target="_blank"><i class="bi bi-instagram"></i></a>
+                  <a href="https://www.linkedin.com/in/daniellobo1999/"><i class="bi bi-linkedin" target="_blank"></i></a>
                 </div>
               </div>
             </div>
@@ -201,17 +201,17 @@
 
           <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="member">
-              <img src="static/img/team/Jen.jpg" class="img-fluid" alt="">
+              <img src="{{ url_for('static', filename='img/team/Jen.jpg') }}" class="img-fluid" alt="">
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>Jenny Dcruz</h4>
                   <span>St. Francis Institute of Technology<br>BE CMPN A - 14</span>
                 </div>
                 <div class="social">
-                  <a href="mailto:jendcruz23@gmail.com"><i class="bi bi-envelope"></i></a>
-                  <a href="https://github.com/jendcruz22"><i class="bi bi-github"></i></a>
-                  <a href="https://www.instagram.com/jennydcruz22/"><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
+                  <a href="mailto:jendcruz23@gmail.com" target="_blank"><i class="bi bi-envelope"></i></a>
+                  <a href="https://github.com/jendcruz22" target="_blank"><i class="bi bi-github"></i></a>
+                  <a href="https://www.instagram.com/jennydcruz22/" target="_blank"><i class="bi bi-instagram"></i></a>
+                  <a href="https://www.linkedin.com/in/jennydcruz/"><i class="bi bi-linkedin" target="_blank"></i></a>
                 </div>
               </div>
             </div>
@@ -219,17 +219,17 @@
 
           <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <div class="member">
-              <img src="static/img/team/Smi.jpg" class="img-fluid" alt="">
+              <img src="{{ url_for('static', filename='img/team/Smi.jpg') }}" class="img-fluid" alt="">
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>Smita Deulkar</h4>
                   <span>St. Francis Institute of Technology<br>BE CMPN A - 17</span>
                 </div>
                 <div class="social">
-                  <a href="mailto:smitashobha1999@gmail.com"><i class="bi bi-envelope"></i></a>
-                  <a href="https://github.com/smita3199"><i class="bi bi-github"></i></a>
-                  <a href="https://www.instagram.com/smita_deulkar/"><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
+                  <a href="mailto:smitashobha1999@gmail.com" target="_blank"><i class="bi bi-envelope"></i></a>
+                  <a href="https://github.com/smita3199" target="_blank"><i class="bi bi-github"></i></a>
+                  <a href="https://www.instagram.com/smita_deulkar/" target="_blank"><i class="bi bi-instagram"></i></a>
+                  <a href="https://www.linkedin.com/in/smitadeulkar/"><i class="bi bi-linkedin" target="_blank"></i></a>
                 </div>
               </div>
             </div>
@@ -237,17 +237,17 @@
 
           <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
             <div class="member">
-              <img src="static/img/team/Lder.jpg" class="img-fluid" alt="">
+              <img src="{{ url_for('static', filename='img/team/Lder.jpg') }}" class="img-fluid" alt="">
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>Leander Fernandes</h4>
                   <span>St. Francis Institute of Technology<br>BE CMPN A - 18</span>
                 </div>
                 <div class="social">
-                  <a href="mailto:fernandeslder@gmail.com"><i class="bi bi-envelope"></i></a>
-                  <a href="https://github.com/fernandeslder"><i class="bi bi-github"></i></a>
-                  <a href="https://www.instagram.com/lderfernandes/"><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
+                  <a href="mailto:fernandeslder@gmail.com" target="_blank"><i class="bi bi-envelope"></i></a>
+                  <a href="https://github.com/fernandeslder" target="_blank"><i class="bi bi-github"></i></a>
+                  <a href="https://www.instagram.com/lderfernandes/" target="_blank"><i class="bi bi-instagram"></i></a>
+                  <a href="https://www.linkedin.com/in/fernandeslder/"><i class="bi bi-linkedin" target="_blank"></i></a>
                 </div>
               </div>
             </div>
@@ -261,63 +261,6 @@
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
-    <!-- <div class="footer-top">
-      <div class="container">
-        <div class="row"> -->
-
-          <!-- <div class="col-lg-3 col-md-6">
-            <div class="footer-info">
-              <h3>SAVN</h3>
-              <p>
-                A108 Adam Street <br>
-                NY 535022, USA<br><br>
-                <strong>Phone:</strong> +1 5589 55488 55<br>
-                <strong>Email:</strong> info@example.com<br>
-              </p>
-              <div class="social-links mt-3">
-                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-              </div>
-            </div>
-          </div> -->
-
-          <!-- <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Steps</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Steps</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
-            </ul>
-          </div> -->
-
-          <!-- <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
-          </div> -->
-
-        <!-- </div>
-      </div>
-    </div> -->
-
     <div class="container">
       <div class="copyright">
         Copyright &copy;  
@@ -332,15 +275,15 @@
   <a href="#hero" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="static/vendor/aos/aos.js"></script>
-  <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="static/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="static/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="static/vendor/php-email-form/validate.js"></script>
-  <script src="static/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="{{ url_for('static', filename='vendor/aos/aos.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/glightbox/js/glightbox.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/php-email-form/validate.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/swiper/swiper-bundle.min.js') }}"></script>
 
   <!-- Template Main JS File -->
-  <script src="static/js/main.js"></script>
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 
 </body>
 
