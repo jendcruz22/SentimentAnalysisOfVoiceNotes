@@ -45,7 +45,7 @@
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link scrollto" href="#steps">Steps</a></li>
-          <li><a class="nav-link scrollto" href="#system">System</a></li>
+          <li><a class="nav-link scrollto" href="{{ url_for('sentimentanalysis') }}">System</a></li>
           <li><a class="nav-link scrollto" href="#team">Team</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -151,7 +151,7 @@
     </section><!-- End Steps Section -->
 
     <!-- ======= System Section ======= -->
-    <section id="system" class="system">
+    <!-- <section id="system" class="system">
       <div class="container">
         <center>
           <div class="section-title" data-aos="fade-up">
@@ -162,9 +162,7 @@
             <div class="col-lg-10">
               <form action="" method="post" role="form" class="php-email-form" enctype=multipart/form-data>
                 <input class="form-control" type="file" id="myFile" name="filename" style="margin-bottom: 20px; padding-top: 11px; padding-left: 18px;">
-                <!-- <div class="text-center">
-                  <a class="form-control" href="{{ url_for('sentimentanalysis') }}">Upload VoiceNote</a>
-                </div> -->
+                
                 <div class="text-center">
                   <button type="submit"><a href="{{ url_for('sentimentanalysis') }}" style="color: white;">Upload VoiceNote</a></button>
                 </div>
@@ -173,7 +171,7 @@
           </div>
         </center>
       </div>
-    </section>
+    </section> -->
 
 
     <!-- ======= Team Section ======= -->
