@@ -35,7 +35,20 @@
    
       <!-- Template Main CSS File -->
       <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
-   
+      
+      <style>
+         #panel, .flip {
+           font-size: 16px;
+           padding: 10px;
+           text-align: center;
+           /* border: solid 1px #000000; */
+           margin: auto;
+         }
+         
+         #panel {
+           display: none;
+         }
+      </style>
    </head>
    
    <body>
@@ -75,11 +88,30 @@
                <div class="row mt-5 justify-content-center" data-aos="fade-up">
                      <div class="col-lg-10">
                         <div class="container">
-                           <a href="/return-files/{{value}}" target="blank" class="btn-get-started scrollto">
+                           <!-- <a class="btn-get-started scrollto">
                               <button class='btn btn-default'>
                                  Download
                               </button>
-                           </a>
+                           </a> -->
+                           <p class="flip" onclick="myFunction()" style="border: solid 1px #000000;">Click to view table</p>
+                           <div id="panel">
+                              <table id="myTable" style="width:100%; border: 1px solid black; border-collapse: collapse;">
+                                 <tr style="width:100%; border: 1px solid black; border-collapse: collapse;">
+                                    {% for header in headings %}
+                                    <th>{{ header }}</th> 
+                                    {% endfor %}
+                                 </tr>
+                                 
+                                 {% for dat in data %}
+                                 <tr>
+                                    {% for cell in dat %}
+                                    <td>{{ cell }}</td>
+                                    {% endfor %}
+                                 </tr>
+                                 {% endfor %}
+
+                              </table>
+                           </div>
                         </div>
                      </div>
                </div>
@@ -112,7 +144,12 @@
       
       <!-- Template Main JS File -->
       <script src="{{ url_for('static', filename='js/main.js') }}"></script>
-   
+
+      <script>
+         function myFunction() {
+           document.getElementById("panel").style.display = "block";
+         }
+      </script>
    </body>
    
 </html>
