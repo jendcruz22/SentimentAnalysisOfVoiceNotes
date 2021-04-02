@@ -23,8 +23,8 @@ def analyzeSentiments(file_path):
         "audio_model": path("../assets/models/audio_sentiment_model"),
         "pickles": path("../assets/pickles"),
         "text_model": path("../assets/models/text_sentiment_model"),
-        "wav_save_path": path(f"../assets/temp/{file_name}-{creation_time}"),
-        "clips_save_path": path(f"../assets/temp/{file_name}-{creation_time}/clips"),
+        "wav_save_path": path(f"../static/temp/{file_name}-{creation_time}"),
+        "clips_save_path": path(f"../static/temp/{file_name}-{creation_time}/clips"),
     }
 
     # Creating directories in temp to store the converted wav file and the clips
@@ -68,8 +68,8 @@ def analyzeSentiments(file_path):
         )
 
         # Taking weighted average of text and audio emotions in the ratio 65:35
-        weighted_text_emotions = text_emotions * 0.65
-        weighted_audio_emotions = audio_emotions * 0.35
+        weighted_text_emotions = text_emotions * 0.5
+        weighted_audio_emotions = audio_emotions * 0.5
         weighted_emotions = weighted_text_emotions + weighted_audio_emotions
 
         # Picking the dominant emotion and labelling it
