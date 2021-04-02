@@ -10,6 +10,9 @@ from sentiment_analysis.Utils import path
 clips, emotions, temp_folder = analyzeSentiments(
     path("../uploads/Alice_in_Wonderland_test.mp3")
 )
+print(clips)
+print(emotions)
+
 print("List of clips:")
 for clip in clips:
     print(clip)
@@ -19,4 +22,4 @@ for emotion in emotions:
 print("\nTemp folder:\n", temp_folder)
 
 # Call this at the end of the session
-deleteTempDirectory(temp_folder)
+# deleteTempDirectory(temp_folder)
