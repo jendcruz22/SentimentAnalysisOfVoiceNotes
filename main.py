@@ -10,7 +10,7 @@ AUDIO_FOLDER = './static/audios/'
 app = Flask(__name__, template_folder='templates')
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 data=[]
-emotion=["angry"]
+emotion=["angry","sad"]
 
 # Home page
 @app.route('/')
@@ -54,7 +54,7 @@ def sentimentanalysis():
         else:
             filename = secure_filename(file.filename)
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-            shutil.copy(os.path.join(app.config['UPLOAD_FOLDER'], filename), os.path.join(app.config['AUDIO_FOLDER'], filename))
+            # shutil.copy(os.path.join(app.config['UPLOAD_FOLDER'], filename), os.path.join(app.config['AUDIO_FOLDER'], filename))
 
       #send file name as parameter to downlad
             return redirect('/downloadfile/'+ filename)
