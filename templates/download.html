@@ -84,13 +84,12 @@
                               
                               {% for i in range(0, len) %}
                                  <h2>
-                                    {{emotion[i]}}
+                                    {{emotions[i][0]}}
                                  </h2>
-                              
-                                 <!-- <h3>{{res[i]}}</h3> -->
+                  
 
                                  <audio controls>
-                                    <source src="{{ url_for('static', filename=res[i] ) }}">
+                                    <source src="{{ url_for('static', filename=clips[i]) }}" type="audio/wav">
                                  </audio>
 
                                  <br><br><br>
