@@ -73,7 +73,6 @@ def sentimentanalysis():
             return redirect("/downloadfile/" + filename)
     return render_template("sentimentanalysis.html")
 
-
 # Download API
 @app.route("/downloadfile/<filename>", methods=["GET"])
 def download_file(filename):
