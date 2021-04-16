@@ -9,6 +9,7 @@ sys.path.append(os.path.abspath("../"))
 
 from sentiment_analysis.SentimentAnalysis import *
 from sentiment_analysis.Utils import path
+from sentiment_analysis.clean_folder import *
 
 UPLOAD_FOLDER = "uploads/"
 AUDIO_FOLDER = "./static/temp/"
@@ -23,34 +24,14 @@ emotion = ["angry", "sad"]
 def index():
     return render_template("index.html")
 
-
 # Upload API
 @app.route("/uploadfile", methods=["GET", "POST"])
 def sentimentanalysis():
 
-    # # Delete existing files from the upload, download, and audio folders before processing the next/new input audio
-    for filename in os.listdir(UPLOAD_FOLDER) or filename in os.listdir(AUDIO_FOLDER):
-        file_path1 = os.path.join(UPLOAD_FOLDER, filename)
-        file_path2 = os.path.join(AUDIO_FOLDER, filename)
-        try:
-            if filename != ".gitignore":
-                if (
-                    os.path.isfile(file_path1)
-                    or os.path.islink(file_path1)
-                    or os.path.isfile(file_path2)
-                    or os.path.islink(file_path2)
-                ):
-                    os.unlink(file_path1)
-                    os.unlink(file_path2)
-
-                elif os.path.isdir(file_path1) or os.path.isdir(file_path2):
-                    shutil.rmtree(file_path1)
-                    shutil.rmtree(file_path2)
-
-        except Exception as e:
-            print("Failed to delete. Reason: %s" % (e))
-
     if request.method == "POST":
+        # clean the existing files from the given folders
+        clean_folder(UPLOAD_FOLDER)
+        clean_folder(AUDIO_FOLDER)
 
         # check if the post request has the file part
         if "file" not in request.files:
@@ -76,8 +57,11 @@ def sentimentanalysis():
 @app.route("/downloadfile/<filename>", methods=["GET"])
 def download_file(filename):
 
+    print(filename)
+
+
     clips, emotions, temp_folder = analyzeSentiments(
-        path(f"{UPLOAD_FOLDER}/Alice_in_Wonderland_test.mp3")
+        path(f"{UPLOAD_FOLDER}/{filename}")
     )
     print("Sentiment analysis done")
 
