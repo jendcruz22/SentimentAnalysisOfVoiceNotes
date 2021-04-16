@@ -1,24 +1,3 @@
-# Environment variables
-python-dotenv==0.15.0
-
-# Audio analysis/segmentation
-librosa==0.8.0
-numba==0.48
-pydub==0.24.1
-tensorflow==2.4.1
-keras==2.4.3
-seaborn==0.11.1
-scikit-learn==0.23.2
-keras-tuner==1.0.2
-
-# Audio Transcription
-ibm-watson==5.1.0
-
-
-# Text analysis 
-ktrain==0.26.2
-
-#Flask and Heroku dependencies
 certifi==2020.12.5
 click==7.1.2
 Flask==1.1.2
