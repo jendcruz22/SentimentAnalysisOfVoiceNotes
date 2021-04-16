@@ -18,13 +18,13 @@ ibm-watson==5.1.0
 ktrain==0.26.2
 
 # Flask and Heroku dependencies
-certifi==2020.12.5
-click==7.1.2
+# certifi==2020.12.5
+# click==7.1.2
 Flask==1.1.2
 gunicorn==20.1.0
 itsdangerous==1.1.0
 Jinja2==2.11.3
-MarkupSafe==1.1.1
+# MarkupSafe==1.1.1
 python-dotenv==0.15.0
 Werkzeug==1.0.1
-wincertstore==0.2
+# wincertstore==0.2
