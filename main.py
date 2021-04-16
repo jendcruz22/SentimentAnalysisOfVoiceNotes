@@ -3,7 +3,6 @@ import glob
 from werkzeug.utils import secure_filename
 from flask import Flask, flash, request, redirect, send_file, render_template
 import shutil
-
 import sys
 
 sys.path.append(os.path.abspath("../"))
