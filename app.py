@@ -47,8 +47,7 @@ def sentimentanalysis():
         else:
             filename = secure_filename(file.filename)
             file.save(os.path.join(app.config["UPLOAD_FOLDER"], filename))
-            # shutil.copy(os.path.join(app.config['UPLOAD_FOLDER'], filename), os.path.join(app.config['AUDIO_FOLDER'], filename))
-
+            
             # send file name as parameter to downlad
             return redirect("/downloadfile/" + filename)
     return render_template("sentimentanalysis.html")
@@ -58,7 +57,6 @@ def sentimentanalysis():
 def download_file(filename):
 
     print(filename)
-
 
     clips, emotions, temp_folder = analyzeSentiments(
         path(f"{UPLOAD_FOLDER}/{filename}")

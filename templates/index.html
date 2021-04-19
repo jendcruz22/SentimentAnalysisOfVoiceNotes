@@ -14,7 +14,7 @@
   <link href="{{ url_for('static', filename='img/icon.png') }}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:600,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="{{ url_for('static', filename='vendor/aos/aos.css') }}" rel="stylesheet">
@@ -117,15 +117,15 @@
               <div class="icon-box icon-box-pink">
                 <div class="icon"><i class="bx bx-user-voice"></i></div>
                 <h4 class="title"><a href="">VoiceNote</a></h4>
-                <p class="description">As the input for our system</p>
+                <p class="description">User uploads an MP3 voice note file as the input</p>
               </div>
             </div>
 
             <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
               <div class="icon-box icon-box-cyan">
                 <div class="icon"><i class="bx bx-code"></i></div>
-                <h4 class="title"><a href="">code</a></h4>
-                <p class="description">blah blah blah blah blah</p>
+                <h4 class="title"><a href="">Code</a></h4>
+                <p class="description">The code consists of a sentiment analysis model that uses BERT and a DNN model to perform text and audio based sentiment analysis.</p>
               </div>
             </div>
 
@@ -133,7 +133,7 @@
               <div class="icon-box icon-box-green">
                 <div class="icon"><i class="bx bx-file"></i></div>
                 <h4 class="title"><a href="">output</a></h4>
-                <p class="description">blah blah blah blah blah</p>
+                <p class="description">The output received by the model is sent back to the UI using the Flask framework</p>
               </div>
             </div>
 
@@ -141,7 +141,7 @@
               <div class="icon-box icon-box-blue">
                 <div class="icon"><i class="bx bx-cloud"></i></div>
                 <h4 class="title"><a href="">cloud</a></h4>
-                <p class="description">blah blah blah blah blah</p>
+                <p class="description">This system is hosted on Heroku which is a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud.</p>
               </div>
             </div>
 
@@ -265,6 +265,39 @@
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-6 col-md-6">
+            <div class="footer-info">
+              <h3>SAVN</h3>
+              <p>
+                St. Francis Institute of Technology <br>
+                Mount Poinsur,<br>
+                Borivali West, <br>
+                Mumbai, <br>
+                Maharashtra 400103. <br>
+              </p>
+              <a href="#team">Contact Us</a>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#hero">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#about">About</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#steps">Steps</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{{ url_for('sentimentanalysis') }}">System</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#team">Team</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
     <div class="container">
       <div class="copyright">
         Copyright &copy;  
