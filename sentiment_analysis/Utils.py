@@ -9,7 +9,7 @@ def path(relative_path):
 
 
 def convertToWav(file_name, file_path, save_path):
-    wav_file_name = f"{save_path}\{file_name}.wav"
+    wav_file_name = f"{save_path}/{file_name}.wav"
     subprocess.call(["ffmpeg", "-i", file_path, wav_file_name])
     return wav_file_name
 
