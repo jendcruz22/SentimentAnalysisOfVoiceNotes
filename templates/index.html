@@ -82,7 +82,7 @@
           </div>
           <div class="col-xl-6 col-lg-5 pt-5 pt-lg-0">
             <h3 data-aos="fade-up">About the system</h3>
-            <p data-aos="fade-up">
+            <p data-aos="fade-up" style="display: flex; justify-content: center;">
               Sentiment analysis is the interpretation and classification of emotions (positive, negative and neutral) 
               within data using several analysis techniques. Sentiment analysis and opinion mining have been acquiring a 
               crucial role in both commercial and research applications because of their possible applicability to several 
@@ -116,32 +116,32 @@
             <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up">
               <div class="icon-box icon-box-pink">
                 <div class="icon"><i class="bx bx-user-voice"></i></div>
-                <h4 class="title"><a href="">VoiceNote</a></h4>
-                <p class="description">User uploads an MP3 voice note file as the input</p>
+                <h4 class="title"><a href="">Voice note</a></h4>
+                <p class="description">User uploads an MP3 voice note file as the input.</p>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="300">
+              <div class="icon-box icon-box-blue">
+                <div class="icon"><i class="bx bx-equalizer"></i></div>
+                <h4 class="title"><a href="">Pre-processing</a></h4>
+                <p class="description">The auido file is converted into wav format and segmented. Audio features are extracted for further analysis.</p>
               </div>
             </div>
 
             <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
               <div class="icon-box icon-box-cyan">
                 <div class="icon"><i class="bx bx-code"></i></div>
-                <h4 class="title"><a href="">Code</a></h4>
-                <p class="description">The code consists of a sentiment analysis model that uses BERT and a DNN model to perform text and audio based sentiment analysis.</p>
+                <h4 class="title"><a href="">Sentiment analysis</a></h4>
+                <p class="description">The audio features are passed to a fully connected DNN which analyzes and predicts an emotion for each segment.</p>
               </div>
             </div>
 
             <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="200">
               <div class="icon-box icon-box-green">
                 <div class="icon"><i class="bx bx-file"></i></div>
-                <h4 class="title"><a href="">output</a></h4>
-                <p class="description">The output received by the model is sent back to the UI using the Flask framework</p>
-              </div>
-            </div>
-
-            <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="300">
-              <div class="icon-box icon-box-blue">
-                <div class="icon"><i class="bx bx-cloud"></i></div>
-                <h4 class="title"><a href="">cloud</a></h4>
-                <p class="description">This system is hosted on Heroku which is a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud.</p>
+                <h4 class="title"><a href="">Output</a></h4>
+                <p class="description">The output displayed will be the audio segments along with their predicted emotions respectvely.</p>
               </div>
             </div>
 
