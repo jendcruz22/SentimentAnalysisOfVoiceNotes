@@ -84,7 +84,7 @@
                               
                               {% for i in range(0, len) %}
                                  <h2>
-                                    {{emotions[i][0]}}
+                                    {{emotions[i]}}
                                  </h2>
                   
 
@@ -107,18 +107,50 @@
    </main>
    
    <!-- ======= Footer ======= -->
-   <!-- <footer id="footer">
-   <div class="container">
-         <div class="copyright">
+   <footer id="footer">
+      <div class="footer-top" style="background-color: black;">
+      <div class="container">
+         <div class="row">
+
+            <div class="col-lg-6 col-md-6">
+            <div class="footer-info">
+               <h3>SAVN</h3>
+               <p>
+                  St. Francis Institute of Technology <br>
+                  Mount Poinsur,<br>
+                  Borivali West, <br>
+                  Mumbai, <br>
+                  Maharashtra 400103. <br>
+               </p>
+               <a href="#team">Contact Us</a>
+            </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+               <li><i class="bx bx-chevron-right"></i> <a href="#hero">Home</a></li>
+               <li><i class="bx bx-chevron-right"></i> <a href="#about">About</a></li>
+               <li><i class="bx bx-chevron-right"></i> <a href="#steps">Steps</a></li>
+               <li><i class="bx bx-chevron-right"></i> <a href="{{ url_for('sentimentanalysis') }}">System</a></li>
+               <li><i class="bx bx-chevron-right"></i> <a href="#team">Team</a></li>
+            </ul>
+            </div>
+
+         </div>
+      </div>
+      </div>
+
+      <div class="container">
+      <div class="copyright">
          Copyright &copy;  
          <script>
             document.write(new Date().getFullYear());
          </script>
          All Rights Reserved.
-         </div>
-   </div>
-   </footer> -->
-   <!-- End Footer -->
+      </div>
+      </div>
+   </footer><!-- End Footer -->
 
    <a href="#hero" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
    

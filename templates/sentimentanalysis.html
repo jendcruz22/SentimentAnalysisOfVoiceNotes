@@ -28,7 +28,7 @@
       <!-- Template Main CSS File -->
       <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
       <link href="{{ url_for('static', filename='css/preloader.css') }}" rel="stylesheet">
-    
+      
     </head>
     
     <body>
@@ -56,42 +56,51 @@
         </div>
     </header><!-- End Header -->
 
-    <div id="preloader" class="animation">
-      <div class="decor">
-        <div class="bar"></div>
+    <div id="full_preloader" style="display: none;">
+      <div id="preloader" class="animation">
+        <div class="decor">
+          <div class="bar"></div>
+        </div>
+        <p>Loading...</p>
       </div>
-      <p>Loading...</p>
+    
+      <div  class="pre-overlay o-1"></div>
+      <div  class="pre-overlay o-2"></div>
     </div>
-  
-    <div class="pre-overlay o-1"></div>
-      <div class="pre-overlay o-2"></div>
   
     <main>
         <!-- ======= System Section ======= -->
-        <section id="system" class="system" style="padding-top: 200px;">
+        <section id="system" class="system" style="padding-top: 180px; padding-bottom: 180px;">
           <div class="preloader-container">
             <div class="container">
-                <center>
-                <div class="section-title" data-aos="fade-up">
+              <center>
+                <div class="row mt-5 justify-content-center" data-aos="fade-up">
+                  <div class="section-title" data-aos="fade-up">
                     <h2>System</h2>
                     <p>Upload a voice note in the form of an mp3 file below.</p>
                 </div>
-                <div class="row mt-5 justify-content-center" data-aos="fade-up">
-                    <div class="col-lg-10">
-                    <!-- <form action="" method="post" role="form" class="php-email-form" enctype=multipart/form-data>
-                        <input class="form-control" type="file" id="myFile" name="filename" style="margin-bottom: 20px; padding-top: 11px; padding-left: 18px;">
-                        
-                        <div class="text-center">
-                        <button type="submit"><a href="{{ url_for('sentimentanalysis') }}" style="color: white;">Upload VoiceNote</a></button>
-                        </div>
-                    </form> -->
-                    <form action="" method=post role="form" class="php-email-form" enctype=multipart/form-data>
-                        <p><input type=file name=file>
-                           <input type=submit value=Upload style="height: 44px; padding: 5px; border-radius: 0; box-shadow: none; font-size: 14px;">
-                    </form>
-                    </div>
+                
+                <div class="col-lg-10">
+                  <form action="" method=post role="form" class="php-email-form" enctype=multipart/form-data style="vertical-align: middle; padding-top: 40px;">
+                      <p><input type=file size="60" name=file
+                        style="padding: 7px; 
+                        padding-right: 100px;">
+                        <input type=submit value=Upload 
+                        style="height: 40px;
+                        padding: 3px;
+                        margin-left: 100px;
+                        padding-left: 50px;
+                        padding-right: 50px;
+                        border-radius: 5%;
+                        border-color: lightgrey;
+                        outline: none;
+                        box-shadow: none;
+                        font-size: 14px;"
+                        onclick="showDiv()"
+                        >
+                  </form>
                 </div>
-                </center>
+              </center>
             </div>
           </div>
         </section>
@@ -100,18 +109,50 @@
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     
     <!-- ======= Footer ======= -->
-    <!-- <footer id="footer">
-    <div class="container">
-        <div class="copyright">
-        Copyright &copy;  
-        <script>
-            document.write(new Date().getFullYear());
-        </script>
-        All Rights Reserved.
+    <footer id="footer">
+      <div class="footer-top" style="background-color: black;">
+        <div class="container">
+          <div class="row">
+
+            <div class="col-lg-6 col-md-6">
+              <div class="footer-info">
+                <h3>SAVN</h3>
+                <p>
+                  St. Francis Institute of Technology <br>
+                  Mount Poinsur,<br>
+                  Borivali West, <br>
+                  Mumbai, <br>
+                  Maharashtra 400103. <br>
+                </p>
+                <a href="#team">Contact Us</a>
+              </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 footer-links">
+              <h4>Our Services</h4>
+              <ul>
+                <li><i class="bx bx-chevron-right"></i> <a href="#hero">Home</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="#about">About</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="#steps">Steps</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="{{ url_for('sentimentanalysis') }}">System</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="#team">Team</a></li>
+              </ul>
+            </div>
+
+          </div>
         </div>
-    </div>
-    </footer> -->
-    <!-- End Footer -->
+      </div>
+
+      <div class="container">
+        <div class="copyright">
+          Copyright &copy;  
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          All Rights Reserved.
+        </div>
+      </div>
+    </footer><!-- End Footer -->
 
     <a href="#hero" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
     
@@ -124,7 +165,13 @@
       
       <!-- Template Main JS File -->
       <script src="{{ url_for('static', filename='js/main.js') }}"></script>
-      <script src="{{ url_for('static', filename='js/preloader.js') }}"></script>
+      <!-- <script src="{{ url_for('static', filename='js/preloader.js') }}"></script> -->
+      <script>
+        function showDiv(){
+          var full_preloader = document.getElementById("full_preloader");
+          full_preloader.style.display='block';
+        }
+      </script>
     
     </body>
     

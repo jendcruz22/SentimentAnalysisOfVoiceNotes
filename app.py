@@ -3,7 +3,7 @@ import glob
 import shutil
 import sys
 from werkzeug.utils import secure_filename
-from flask import Flask, flash, request, redirect, send_file, render_template
+from flask import Flask, flash, request, redirect, send_file, render_template, url_for, session, jsonify, json
 
 sys.path.append(os.path.abspath("../"))
 
@@ -16,8 +16,8 @@ AUDIO_FOLDER = "./static/temp/"
 
 app = Flask(__name__, template_folder="templates")
 app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
-data = []
-emotion = ["angry", "sad"]
+app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
+final_filename = ""
 
 # Home page
 @app.route("/")
@@ -48,20 +48,18 @@ def sentimentanalysis():
             filename = secure_filename(file.filename)
             file.save(os.path.join(app.config["UPLOAD_FOLDER"], filename))
             
+            global final_filename
+            final_filename = filename
+
             # send file name as parameter to downlad
-            return redirect("/downloadfile/" + filename)
+            return redirect("/download_file/")
     return render_template("sentimentanalysis.html")
 
 # Download API
-@app.route("/downloadfile/<filename>", methods=["GET"])
-def download_file(filename):
-
-    print(filename)
-
-    clips, emotions, temp_folder = analyzeSentiments(
-        path(f"{UPLOAD_FOLDER}/{filename}")
-    )
-    print("Sentiment analysis done")
+@app.route("/download_file/", methods=["GET"])
+def download_file():
+    clips, emotions, temp_folder = analyzeSentiments(path(f"{UPLOAD_FOLDER}/{final_filename}"))
+    emotions = np.array(emotions).flatten()
 
     return render_template(
         "download.html", clips=clips, emotions=emotions, len=len(clips)
