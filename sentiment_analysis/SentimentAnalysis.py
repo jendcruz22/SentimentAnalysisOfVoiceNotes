@@ -13,7 +13,8 @@ from sentiment_analysis.Utils import *
 
 def analyzeSentiments(file_path):
 
-    file_name = (file_path.split("\\")[-1])[:-4]
+    # file_name = (file_path.split("\\")[-1])[:-4]
+    file_name = (file_path.split("/")[-1])[:-4]
     creation_time = time.time()
 
     paths = {
@@ -94,7 +95,8 @@ def analyzeSentiments(file_path):
     final_clips = []
 
     for clip in clips:
-        elements = clip.split("\\")
+        # elements = clip.split("\\")
+        elements = clip.split("/")
         final_clips.append("temp/" + "/".join(elements[len(elements) - 3 :]))
 
     return (
