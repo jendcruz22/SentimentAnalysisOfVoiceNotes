@@ -32,9 +32,22 @@
     </head>
     
     <body>
-    
+      
       <!-- ======= Header ======= -->
       <header id="header" class="fixed-top d-flex align-items-center">
+
+        <!-- ======= Preloader ======= -->
+        <div id="full_preloader" style="display: none;">
+          <div id="preloader" class="animation">
+            <div class="decor">
+              <div class="bar"></div>
+            </div>
+            <p>Loading...</p>
+          </div>
+        
+          <div  class="pre-overlay o-1"></div>
+          <div  class="pre-overlay o-2"></div>
+        </div>
         <div class="container d-flex justify-content-between">
     
           <div class="logo" style="padding-bottom: 20px;">
@@ -55,18 +68,6 @@
     
         </div>
     </header><!-- End Header -->
-
-    <div id="full_preloader" style="display: none;">
-      <div id="preloader" class="animation">
-        <div class="decor">
-          <div class="bar"></div>
-        </div>
-        <p>Loading...</p>
-      </div>
-    
-      <div  class="pre-overlay o-1"></div>
-      <div  class="pre-overlay o-2"></div>
-    </div>
   
     <main>
         <!-- ======= System Section ======= -->
@@ -164,7 +165,7 @@
       
       <!-- Template Main JS File -->
       <script src="{{ url_for('static', filename='js/main.js') }}"></script>
-      <!-- <script src="{{ url_for('static', filename='js/preloader.js') }}"></script> -->
+      
       <script>
         function showDiv(){
           var full_preloader = document.getElementById("full_preloader");

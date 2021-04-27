@@ -60,7 +60,6 @@ a,a:hover,a:focus,a:link,a:visited,a:active {
     text-decoration: none;
 }
 .container {
-    max-width: 960px;
     margin: 0 auto;
 }
 main h1 {
