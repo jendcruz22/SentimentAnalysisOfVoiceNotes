@@ -73,8 +73,8 @@
             <div class="container">
                <center>
                <div class="section-title" data-aos="fade-up">
-                     <h2>System</h2>
-                     <p>Upload a voice note in the form of an mp3 file below.</p>
+                     <h2>Output</h2>
+                     <p>Listed below are the audio segments along with the predicted emotions.</p>
                </div>
                <div class="row mt-5 justify-content-center" data-aos="fade-up">
                      <div class="col-lg-10">
@@ -83,11 +83,14 @@
                            <div>
                               
                               {% for i in range(0, len) %}
-                                 <h2>
-                                    {{emotions[i]}}
-                                 </h2>
-                  
 
+                                 <h2>
+                                    Clip {{i+1}}
+                                 </h2>
+                                 <h3>
+                                    Predicted emotion : {{emotions[i]}}
+                                 </h3>
+                  
                                  <audio controls>
                                     <source src="{{ url_for('static', filename=clips[i]) }}" type="audio/wav">
                                  </audio>
