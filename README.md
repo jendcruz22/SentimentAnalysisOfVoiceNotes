@@ -107,7 +107,7 @@ flask run
 
 ## <a name="Demo">**7. Demonstration**</a>
 Click on the GIF to watch the demonstration video.
-[![SAVN System's Demonstration](static/img/SAVN_GIF.gif)](https://www.youtube.com/watch?v=--b-9HrKK6w)
+[![SAVN System's Demonstration](static/img/SAVN_GIF.gif)](https://www.youtube.com/watch?v=wqiLqmkHq-o)
 
 ## <a name="Collab">**8. Collaborators:**</a>
 *   [Daniel Lobo](https://github.com/danlobo1999)
