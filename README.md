@@ -101,8 +101,11 @@ flask run
 * The main page ie the [index.html](https://github.com/jendcruz22/DeepAudiobookTunerApp/blob/master/templates/index.html) file consists of the basic details of this application: How it works, about the system, about the team, etc.
 
 * This application accepts mp3 audio files as input ([upload_file.html](https://github.com/jendcruz22/SentimentAnalysisOfVoiceNotes/blob/main/templates/sentimentanalysis.html)) which is saved in the [uploads folder](https://github.com/jendcruz22/SentimentAnalysisOfVoiceNotes/tree/main/uploads).  
+
 * This audio is then segmented, processed and analysed by our ABSA model which in turn generates a list of predicted sentiments. 
+
 * The segmented audio along with the predicted emotion for each audio segment is displayed as the output to the user. ([download.html](https://github.com/jendcruz22/SentimentAnalysisOfVoiceNotes/blob/main/templates/download.html))
+
 * The [assets](https://github.com/jendcruz22/SentimentAnalysisOfVoiceNotes/tree/main/assets) and [sentimentanalysis](https://github.com/jendcruz22/SentimentAnalysisOfVoiceNotes/tree/main/sentiment_analysis) folders consist of the models used, the dependencies and other code that is used to run the application. 
 
 ## <a name="Demo">**7. Demonstration**</a>
